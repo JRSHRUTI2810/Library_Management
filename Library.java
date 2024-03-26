@@ -41,5 +41,16 @@ public class Library {
         }
         return result;
     }
+
+    public List<Book> searchByCategory(String category) {
+        List<Book> result = new ArrayList<>();
+        for (Book book : books) {
+            if (book.getCategory().equalsIgnoreCase(category)) {
+                result.add(book);
+            }
+        }
+        return result;
+    }
+
 }
 
